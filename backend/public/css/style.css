@@ -1,0 +1,107 @@
+body * {
+    font-family: arial, sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.navbar {
+    background: #F8D117;
+} .navbar-brand {
+   
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #0a39ab;
+    font-family: arial, sans-serif;
+    margin-left: 5em;
+} #logo {
+    width: 59px;
+    height: 59px;
+    margin-left: 2%;
+    z-index: 0;
+    cursor: pointer;
+} .btn {
+    height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    background-color: #1194f6;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 15px;
+} input[type="text"], input[type="password"] {
+    border: none;
+    padding: 15px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+    background-color: #f9e867;
+    border-bottom: 3px solid #cab734;
+    outline: none;
+    height: 50px;
+} .caixa-login {
+    width: 350px;
+    height: 450px;
+    min-height: 450px;
+    max-height: 450px;
+    display: table;
+    background-color: #F8D117;
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-shadow: 0px 2px 5px 1px rgba(153,153,153,1);
+    -moz-box-shadow: 0px 2px 5px 1px rgba(153,153,153,1);
+    box-shadow: 0px 2px 5px 1px rgba(153,153,153,1);
+    position: relative;
+    overflow: hidden;
+    padding: 0px 30px;
+} .container h1 {
+    font-size: 23px;
+    text-align: center;
+    position: relative;
+    color: #0a39ab;
+    font-weight: normal;
+    margin-top: 18px;
+    margin-bottom: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+} .info {
+    color: #8d812b;
+    font-size: 12px;
+    padding-top: 5px;
+    float: left;
+    width: 100%;
+    text-align: center;
+} .custom-control-label {
+    padding: 0px 10px;
+    margin-top: 20px;
+    color: #8d812b;
+    font-size: 15px;
+} .chatbot_template {
+    width: 350px;
+    height: 50px;
+    line-height: 50px;
+    background: fuchsia;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #1194f6;
+    margin: auto;
+    margin-top: 306px;
+} .chatbot_template div {
+    float: left;
+    margin-right: 10px;
+    margin-left: 35px;
+    cursor: pointer;
+} .chatbot_template img {
+    float: right;
+    margin-top: 8px;
+    width: 35px;
+}

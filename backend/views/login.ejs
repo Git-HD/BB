@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Banco do Brasil</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://www.bb.com.br/pbb/app/docs/comum/images/structure/header/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.bb.com.br/pbb/app/docs/comum/images/structure/header/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://www.bb.com.br/pbb/app/docs/comum/images/structure/header/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.bb.com.br/pbb/app/docs/comum/images/structure/header/icon/favicon-16x16.png">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<nav class="navbar">
+<a class="navbar-brand" href="#">
+    <img id="bb" src="img/bblogo.png" height="40">
+    <img id="logo" src="https://www.bb.com.br/pbb/img.ImgWriter?codigo=40846&origem=CCI&v=201911221" width="30" height="30" class="d-inline-block align-top" alt="logo">
+</a>
+</nav>
+
+    <div class="caixa-login">
+    <div class="container">
+        <h1>Login e senha</h1>
+                <h5 id='err' style="color: red;text-align: center;">
+                        <%= message %></h5>
+    <form action="logar" method="POST">
+        <label id="lnome" for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" onkeypress="valid()" placeholder="Digite seu nome" autofocus>
+            <span id="log" class="info">Informe seu nome ou login</span>
+        <label id="lsenha" for="senha">Senha</label>
+            <input type="password" name="senha" onkeypress="valid()" id="senha" placeholder="Digite sua senha">
+            <span id="pass" class="info">Informe sua senha</span>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+            <label class="custom-control-label" for="customSwitch1" aria-checked="true">Guardar login e senha</label>
+            </div>
+        <button class="btn" type="submit" onclick="valid()">Acessar Conta</button>
+    </form>
+    <p style="color: #0a39ab;">Não possui conta? <strong><a style="color: #0a39ab;" id="link" href="/cadastro">Cadastre-se</a></strong></p>
+    </div>
+    </div>
+
+    <div class="chatbot_template">
+        <div aria-label="Precisa de ajuda?">
+            <img class="chat-ativo" src="https://www2.bancobrasil.com.br/aapf/imagens/chatbot_icon.png">
+        </div>
+        <div aria-label="Links úteis">
+            <img class="chat-ativo" src="https://www2.bancobrasil.com.br/aapf/imagens/icon_contatos_login.png">
+        </div>
+        <div aria-label="Requisitos mínimos">
+            <img class="chat-ativo" src="https://www2.bancobrasil.com.br/aapf/imagens/requisitos-minimo.png">
+        </div>
+        <div aria-label="Termos de uso">
+            <img class="chat-ativo" src="https://www2.bancobrasil.com.br/aapf/imagens/termos-uso.png">
+        </div>
+    </div>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script>
+            function valid() {
+               let n = document.getElementById("nome").value;
+                let s = document.getElementById("senha").value;
+    
+                if (n == "" || n == null) {
+                   document.getElementById("log").innerHTML = "Nome é um campo obrigatório";
+                   document.getElementById("log").style.color = "red";
+                   document.getElementById("lnome").style.color = "red";
+                   document.getElementById("nome").style.borderBottom = "3px solid red"; 
+                } else {
+                    document.getElementById("log").style.color = "";
+                    document.getElementById("log").innerHTML = "Informe seu nome ou login";
+                    document.getElementById("lnome").style.color = "#1194f6";
+                    document.getElementById("nome").style.borderBottom = "3px solid #1194f6"; 
+                }
+    
+                if (s == "" || s == null) {
+                    document.getElementById("pass").innerHTML = "Senha é um campo obrigatório";
+                    document.getElementById("pass").style.color = "red";
+                    document.getElementById("lsenha").style.color = "red";
+                    document.getElementById("senha").style.borderBottom = "3px solid red"; 
+                } else {
+                    document.getElementById("pass").style.color = "";
+                    document.getElementById("pass").innerHTML = "Informe sua senha";
+                    document.getElementById("lsenha").style.color = "#1194f6";
+                    document.getElementById("senha").style.borderBottom = "3px solid #1194f6"; 
+                }
+            }
+        </script>
+</body>
+</html>
