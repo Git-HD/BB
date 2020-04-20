@@ -18,7 +18,7 @@ controller.cadastro = (req, res) => {
 controller.registar = (req, res) => {
     const nome = req.body.nome;
     const email = req.body.email;
-
+    
     req.getConnection((err, connection) => {
         const query = connection.query('SELECT * FROM db.usuario WHERE nome= ? ;', nome, (err, result) => {
 

@@ -1,0 +1,14 @@
+create database db;
+
+use db;
+
+select * from usuario;
+
+create table usuario (
+	id int primary key auto_increment,
+    nome varchar(50),
+    email varchar(50),
+    senha varchar(100)
+);
+
+Obs: package.json de outro projeto, alguns modulos podem não estar sendo utilizados
